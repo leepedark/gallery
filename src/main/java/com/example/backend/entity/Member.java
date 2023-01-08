@@ -1,8 +1,12 @@
 package com.example.backend.entity;
 
+import com.example.backend.repository.BoardRepository;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,4 +26,7 @@ public class Member {
 
     @Column(nullable = false, length = 100)
     private String name;
+
+//    @OneToMany(mappedBy = "member")
+//    private List<Board> board = new ArrayList<>();
 }
