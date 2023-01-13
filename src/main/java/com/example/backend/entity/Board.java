@@ -1,7 +1,7 @@
 package com.example.backend.entity;
 
-import com.sun.istack.NotNull;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,11 +20,12 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-//    @NotNull
-//    @Size(min=2, max=30, message = "제목은 2자이상 30자 이하입니다.")
+    @NotNull
     private String title;
+    @NotNull
     private String content;
 
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createAt;
 
     private LocalDateTime modifyAt;

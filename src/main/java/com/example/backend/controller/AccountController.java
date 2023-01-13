@@ -25,12 +25,15 @@ public class AccountController {
     JwtService jwtService;
 
     @PostMapping("/api/account/join")
-    public ResponseEntity join(@RequestBody JoinDto joinDto) {
+    public ResponseEntity join(@RequestBody Member member) {
 
         Member newMember = new Member();
-        newMember.setEmail(joinDto.getEmail());
-        newMember.setName(joinDto.getName());
-        newMember.setPassword(joinDto.getPassword());
+        newMember.setEmail(member.getEmail());
+        newMember.setName(member.getName());
+        newMember.setPassword(member.getPassword());
+        newMember.setPostNo(member.getPostNo());
+        newMember.setBasicAddress(member.getBasicAddress());
+        newMember.setDtlAddress(member.getDtlAddress());
 
         memberRepository.save(newMember);
 
