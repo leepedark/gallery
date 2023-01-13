@@ -29,11 +29,11 @@ public class Board {
 
     private LocalDateTime modifyAt;
 
-//    private int memberId;
+    private int memberId;
 
-    @ManyToOne
-    @JoinColumn(name = "member_id", referencedColumnName = "id")
-    private Member member;
+//    @ManyToOne
+//    @JoinColumn(name = "member_id", referencedColumnName = "id")
+//    private Member member;
 
 //    @ManyToOne
 //    @JoinColumn(name = "user_id")
