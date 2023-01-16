@@ -59,7 +59,7 @@ public class BoardController {
                 .title(boardDto.getTitle())
                 .content(boardDto.getContent())
                 .memberId(memberId)
-                .createAt(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .build();
 
         boardRepository.save(board);

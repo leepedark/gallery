@@ -18,5 +18,5 @@ public class BoardDto implements Serializable {
     @NotNull
     @Size(min=2)
     private String content;
-    private String createAt;
+    private String createdAt;
 }

@@ -30,7 +30,7 @@ public class Member {
     private String postNo;
 
     private String basicAddress;
-    private String DtlAddress;
+    private String dtlAddress;
 
 //    @OneToMany(mappedBy = "member")
 //    private List<Board> board = new ArrayList<>();

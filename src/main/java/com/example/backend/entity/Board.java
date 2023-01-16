@@ -26,9 +26,9 @@ public class Board {
     private String content;
 
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
-    private LocalDateTime modifyAt;
+    private LocalDateTime modifiedAt;
 
     private int memberId;
 
